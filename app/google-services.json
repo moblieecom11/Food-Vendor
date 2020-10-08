@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "68327391167",
+    "firebase_url": "https://zapmeal-40428.firebaseio.com",
+    "project_id": "zapmeal-40428",
+    "storage_bucket": "zapmeal-40428.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:68327391167:android:f1d2e6e2d3cd097d5eab0a",
+        "android_client_info": {
+          "package_name": "com.teamx.zapmeal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "68327391167-vbqcmm5mv9ue0r5ekn8h9j223g6i504b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.teamx.zapmeal",
+            "certificate_hash": "ae907c44bc6b0581cbfa8d073c048efbdd3a12d0"
+          }
+        },
+        {
+          "client_id": "68327391167-mlrprud2soquj34p028lbbmm073ppepm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBF4L_qIE2MiqWdYZpLCKAhauYLXXZ9tIE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "68327391167-mlrprud2soquj34p028lbbmm073ppepm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
