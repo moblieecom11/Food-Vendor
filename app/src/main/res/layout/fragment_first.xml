@@ -1,28 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FirstFragment">
+    android:background="@color/bg_screen1">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/img_width_height"
+        android:layout_height="@dimen/img_width_height"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dist_margin"
+        android:src="@drawable/zapmeal_logo"
+        tools:layout_editor_absoluteX="60dp"
+        tools:layout_editor_absoluteY="114dp" />
 
     <TextView
-        android:id="@+id/textview_first"
+        android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_first_fragment"
-        app:layout_constraintBottom_toTopOf="@id/button_first"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dist_margin"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/slide_1_title"
+        android:textColor="@color/slide_text_color"
+        android:textSize="@dimen/slide_title"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="139dp"
+        tools:layout_editor_absoluteY="417dp" />
 
-    <Button
-        android:id="@+id/button_first"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/next"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_first" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="371dp"
+        android:layout_height="91dp"
+        android:text="@string/slide_1_desc"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/slide_text_color"
+        android:textSize="@dimen/slide_desc"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="477dp"
+        android:layout_gravity="center"/>
+</LinearLayout>

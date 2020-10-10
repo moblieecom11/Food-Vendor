@@ -6,4 +6,31 @@
     <color name="button_color">#3399ff</color>
     <color name="text_color">#0066cc</color>
     <color name="dark_text_color">#191966</color>
+    <!-- colors for background screen -->
+    <color name="bg_screen1">#ff0000</color>
+    <color name="bg_screen2">#ff0066</color>
+    <color name="bg_screen3">#0000ff</color>
+    <color name="bg_screen4">#ff3300</color>
+    <!-- colors for active screens -->
+    <color name="active_screen1">#ff9999</color>
+    <color name="active_screen2">#ff99cc</color>
+    <color name="active_screen3">#9999ff</color>
+    <!-- colors for in active screens -->
+    <color name="nactive1">#990000</color>
+    <color name="nactive2">#800040</color>
+    <color name="nactive3">#000080</color>
+
+    <color name="slide_text_color">#fff</color>
+
+    <array name="array_dot_active">
+        <item>@color/active_screen1</item>
+        <item>@color/active_screen2</item>
+        <item>@color/active_screen3</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/nactive1</item>
+        <item>@color/nactive2</item>
+        <item>@color/nactive3</item>
+    </array>
 </resources>
