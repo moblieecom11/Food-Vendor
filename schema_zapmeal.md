@@ -42,7 +42,8 @@ var Food :{
 	
     food_price_description:   {type: String, default: ''},
 	
-	other_food_detail:   {type: String, default: ''},
+	otherFoodDetail:   {type: String, default: ''},
+
 	
 	foodImage:{type:String, default:''},
 
