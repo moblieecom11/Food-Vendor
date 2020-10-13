@@ -13,7 +13,8 @@ var User :{
 	
     Is_food_vendor:   {type: Boolean, default: false },
 	
-    food_vendor_name:   {type: Boolean, default: false},
+    foodVendorName:   {type: Boolean, default: false},
+
 	
 	verification_code:   {type: String, default: false},
 	
