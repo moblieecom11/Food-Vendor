@@ -40,7 +40,8 @@ var Food :{
 	
     food_descrption:   {type: String, default: '' },
 	
-    food_price_description:   {type: String, default: ''},
+    foodPriceDescription:   {type: String, default: ''},
+
 	
 	otherFoodDetail:   {type: String, default: ''},
 
