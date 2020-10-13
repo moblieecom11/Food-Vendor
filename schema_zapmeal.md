@@ -21,7 +21,8 @@ var User :{
 	
 	latitude:{type:String, default:''},
 	
-     longtitude:{type:String, default:'' },
+       longtitude:{type:String, default:'' },
+
 	
 	Date:{type:Date, default:'' },
 }
