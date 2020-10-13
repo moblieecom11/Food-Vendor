@@ -30,7 +30,8 @@ var Food :{
 	
 	vendor_id: { type: String,  default: ''},
 	
-    food_id: {   type: String,   default: '' },
+    foodId: {   type: String,   default: '' },
+
 	
 	foodName: {type: String, default: ''},
 
