@@ -44,7 +44,8 @@ var Food :{
 	
 	other_food_detail:   {type: String, default: ''},
 	
-	food_image:{type:String, default:''},
+	foodImage:{type:String, default:''},
+
 	
 	latitude:{type:String, default:''},
 	
