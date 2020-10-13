@@ -11,7 +11,8 @@ var User :{
 	
 	phoneNumber: {type: String, unique: true},
 	
-    Is_food_vendor:   {type: Boolean, default: false },
+    isFoodVendor:   {type: Boolean, default: false },
+
 	
     foodVendorName:   {type: Boolean, default: false},
 
