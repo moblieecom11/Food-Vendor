@@ -36,7 +36,8 @@ var Food :{
 	foodName: {type: String, default: ''},
 
 	
-	food_price: {type: String, default: ''},
+	foodPrice: {type: String, default: ''},
+
 	
 	foodType: {type: String, default: ''},
 
