@@ -22,6 +22,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private ViewPager viewPager;
@@ -37,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         // Checking for first time launch - before calling setContentView()
         prefManager = new PrefrenceManager(this);
         if (!prefManager.isFirstTimeLaunch()) {
@@ -45,12 +45,11 @@ public class MainActivity extends AppCompatActivity {
             finish();
         }
 
+
         // Making notification bar transparent
         if (Build.VERSION.SDK_INT >= 21) {
             getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
         }
-
-        setContentView(R.layout.activity_main);
 
         viewPager = (ViewPager) findViewById(R.id.view_pager);
         dotsLayout = (LinearLayout) findViewById(R.id.layoutDots);
@@ -91,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
                     // move to next screen
                     viewPager.setCurrentItem(current);
                 } else {
-                    launchHomeScreen();
+                    launchNextScreen();
                 }
             }
         });
@@ -121,11 +120,25 @@ public class MainActivity extends AppCompatActivity {
         return viewPager.getCurrentItem() + i;
     }
 
-    private void launchHomeScreen() {
+    private void launchNextScreen() {
         prefManager.setFirstTimeLaunch(false);
         startActivity(new Intent(MainActivity.this, UserSignUpPage.class));
         finish();
     }
+   private void launchHomeScreen() {
+     //  prefManager.setFirstTimeLaunch(false);
+       if (prefManager.getUserChoice() == "vendor"){
+           Toast.makeText(this, "Vendor Activity!", Toast.LENGTH_LONG).show();
+       }
+       else if (prefManager.getUserChoice() == "registered_user"){
+           startActivity(new Intent(MainActivity.this, RegisteredUser.class));
+           finish();
+       }
+       //else {
+       //    Toast.makeText(this, "No User!", Toast.LENGTH_LONG).show();
+      // }
+
+   }
 
     ViewPager.OnPageChangeListener viewPagerPageChangeListener = new ViewPager.OnPageChangeListener() {
 

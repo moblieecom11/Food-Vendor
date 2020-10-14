@@ -27,13 +27,13 @@
         <item>@color/active_screen2</item>
         <item>@color/active_screen3</item>
     </array>
+    <!-- for night mode-->
+    <color name="backgroundColor">#000</color>
+    <color name="textColor">#fff</color>
 
     <array name="array_dot_inactive">
         <item>@color/nactive1</item>
         <item>@color/nactive2</item>
         <item>@color/nactive3</item>
     </array>
-    <!-- for normal/day mode-->
-    <color name="backgroundColor">#ffffff</color>
-    <color name="textColor">#000</color>
 </resources>

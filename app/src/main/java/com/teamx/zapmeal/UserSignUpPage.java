@@ -26,14 +26,14 @@ public class UserSignUpPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         // Checking for first time launch - before calling setContentView()
-
         setContentView(R.layout.activity_user_sign_up_page);
-
         userDB = new UserDB(this);
+        prefManager = new PrefrenceManager(this);
         guest = findViewById(R.id.textView5);
-        vendor = findViewById(R.id.button4);
-        user = findViewById(R.id.button5);
+        vendor = findViewById(R.id.button5);
+        user = findViewById(R.id.button4);
         mAuth = FirebaseAuth.getInstance();
 
         guest.setOnClickListener(new View.OnClickListener() {
@@ -45,10 +45,11 @@ public class UserSignUpPage extends AppCompatActivity {
         vendor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(UserSignUpPage.this, Login.class);
+                Intent i = new Intent(v.getContext(), Login.class);
                 Bundle bundle = new Bundle();
                 bundle.putString("user", "vendor");
-                userDB.storeData("vendor");
+                prefManager.storeUserChoice("vendor");
+               // userDB.storeData("vendor");
                 i.putExtras(bundle);
                 startActivity(i);
             }
@@ -56,10 +57,11 @@ public class UserSignUpPage extends AppCompatActivity {
         user.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(UserSignUpPage.this, Login.class);
+                Intent i = new Intent(v.getContext(), Login.class);
                 Bundle bundle = new Bundle();
                 bundle.putString("user", "registered_user");
-                userDB.storeData("registered_user");
+                prefManager.storeUserChoice("registered_user");
+               // userDB.storeData("registered_user");
                 i.putExtras(bundle);
                 startActivity(i);
             }

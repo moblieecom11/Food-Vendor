@@ -12,17 +12,16 @@ public class ViewPagerAdapter extends PagerAdapter {
     private int[] layouts;
     Context context;
 
-
     public ViewPagerAdapter(Context context, int[] layouts) {
+
         this.context = context;
         this.layouts = layouts;
+
     }
 
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
         layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-
-
 
         View view = layoutInflater.inflate(layouts[position], container, false);
         container.addView(view);
