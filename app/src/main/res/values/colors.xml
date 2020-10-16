@@ -6,4 +6,8 @@
     <color name="button_color">#3399ff</color>
     <color name="text_color">#0066cc</color>
     <color name="dark_text_color">#191966</color>
+    <color name="blue1">#3F51B5</color>
+    <color name="blue2">#2196F3</color>
+    <color name="bluelink">#021F37</color>
+
 </resources>

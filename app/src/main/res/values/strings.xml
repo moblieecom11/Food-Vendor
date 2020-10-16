@@ -7,12 +7,21 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
+    <!--  Registration and login  -->
+    <string name="login_description">Please fill this form</string>
+    <string name="action_sign">Sign in</string>
+    <string name="email_registration">Email</string>
+    <string name="prompt_email">Enter your email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="register">Register</string>
+    <string name="forgot_password">Forgot password</string>
+    <string name="resend_verification_email">Resend verification email</string>
+
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-    <string name="confirm_password">Confirm password</string>
     <string name="user_name">User name</string>
     <string name="email">Email</string>
-    <string name="password">Password</string>
     <string name="phone_number">Phone number</string>
     <string name="resturant_s_name">Resturant\'s name</string>
     <string name="sign_up">Sign Up</string>
