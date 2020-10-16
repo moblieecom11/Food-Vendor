@@ -29,19 +29,20 @@ import java.util.List;
 
 public class Login extends AppCompatActivity {
     GoogleSignInClient mGoogleSignInClient;
-    SignInButton gbutton;
     private FirebaseAuth mAuth;
     private int RC_SIGN_IN = 1822;
     List<AuthUI.IdpConfig> providers;
     // button to log out
-    Button signout;
+    //Button signout;
+    UserDB userDB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-//        gbutton = findViewById(R.id.sign_in_button);
-        signout = findViewById(R.id.button3);
+        //
+       // signout = findViewById(R.id.button3);
+        userDB = new UserDB(this);
         // Choose authentication providers
         providers = Arrays.asList(
                 new AuthUI.IdpConfig.EmailBuilder().build(),
@@ -49,7 +50,8 @@ public class Login extends AppCompatActivity {
                 new AuthUI.IdpConfig.FacebookBuilder().build());
 
         showSignInOptions();
-        msignOut();
+      //  msignOut();
+
     }
 
     private void showSignInOptions() {
@@ -75,8 +77,44 @@ public class Login extends AppCompatActivity {
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                 // show email as toast
                 Toast.makeText(this, ""+user.getEmail(), Toast.LENGTH_LONG).show();
+                // open welcome page
+                try{
+                    Bundle bundle = getIntent().getExtras();
+                    String id = bundle.getString("user");
+
+                    if (id == "vendor"){
+                        Intent i = new Intent(Login.this, Welcome.class);
+                        Bundle bundle1 = new Bundle();
+                        bundle1.putString("message", "Vendor");
+                        i.putExtras(bundle1);
+                        startActivity(i);
+                    }
+                    else{
+                        Intent i = new Intent(Login.this, Welcome.class);
+                        Bundle bundle1 = new Bundle();
+                        bundle1.putString("message", "User");
+                        i.putExtras(bundle1);
+                        startActivity(i);
+                    }
+                } catch (Exception e) {
+                    String id = userDB.retrieveData();
+                    if (id == "vendor"){
+                        Intent i = new Intent(Login.this, Welcome.class);
+                        Bundle bundle1 = new Bundle();
+                        bundle1.putString("message", "Vendor");
+                        i.putExtras(bundle1);
+                        startActivity(i);
+                    }
+                    else{
+                        Intent i = new Intent(Login.this, Welcome.class);
+                        Bundle bundle1 = new Bundle();
+                        bundle1.putString("message", "User");
+                        i.putExtras(bundle1);
+                        startActivity(i);
+                    }
+                }
                 // set button signout
-                signout.setEnabled(true);
+            //    signout.setEnabled(true);
             }
             else{
                 Toast.makeText(this, ""+response.getError().getMessage(), Toast.LENGTH_LONG).show();
@@ -85,7 +123,7 @@ public class Login extends AppCompatActivity {
         }
     }
     // handle signout
-    public void msignOut(){
+  /*  public void msignOut(){
         signout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -104,6 +142,6 @@ public class Login extends AppCompatActivity {
                 });
             }
         });
-    }
+    }*/
 
 }
