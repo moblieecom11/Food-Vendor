@@ -2,6 +2,7 @@ package com.teamx.zapmeal;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
 		isFirstLogin();
 	}
+
 
 	private void isFirstLogin() {
 		Log.d(TAG, "isFirstLogin: Checking if this is the first login");

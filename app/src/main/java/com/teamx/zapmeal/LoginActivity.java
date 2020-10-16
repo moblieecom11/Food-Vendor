@@ -29,7 +29,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 			Log.d(TAG, "Go to profile");
 
 			// Navigate to the activity
-			Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+			Intent intent = new Intent(v.getContext(), MainActivity.class);
 			startActivity(intent);
 			finish();
 			overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
