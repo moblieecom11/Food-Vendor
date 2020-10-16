@@ -40,7 +40,7 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        gbutton = findViewById(R.id.sign_in_button);
+//        gbutton = findViewById(R.id.sign_in_button);
         signout = findViewById(R.id.button3);
         // Choose authentication providers
         providers = Arrays.asList(
