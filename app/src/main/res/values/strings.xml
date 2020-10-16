@@ -9,4 +9,42 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <!-- Spinner Options -->
+    <string-array name="delivering_array">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+    <string name="gender_male">Male</string>
+    <string name="gender_female">Female</string>
+    <string name="gender_none">Do Not Identify</string>
+    <string name="gender_prompt">Choose your gender</string>
+
+    <!-- Dialog Messages -->
+    <string name="first_time_vendor_message">
+        We noticed this is your first login. Make sure to input your food preferences in the Settings screen so we can find potential matches!
+    </string>
+
+
+    <string-array name="food_category">
+        <item>Fries</item>
+        <item>Local Dishes</item>
+        <item>Local Dishes</item>
+        <item>Continental Dishes</item>
+        <item>Drinks</item>
+        <item></item>
+    </string-array>
+    <string name="status_looking">Looking</string>
+    <string name="status_not_looking">Not Looking</string>
+    <string name="relationship_prompt">You you looking?</string>
+
+
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+        anim id est laborum.
+</string>
+
 </resources>

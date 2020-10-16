@@ -1,56 +1,56 @@
 package com.teamx.zapmeal;
 
-import android.os.Bundle;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
-import android.view.View;
+import android.content.DialogInterface;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.util.Log;
 
-import android.view.Menu;
-import android.view.MenuItem;
+import com.teamx.zapmeal.util.PreferenceKeys;
 
 public class MainActivity extends AppCompatActivity {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+	private static final String TAG = "MainActivity";
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-    }
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.vendor_profile);
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
+		isFirstLogin();
+	}
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+	private void isFirstLogin() {
+		Log.d(TAG, "isFirstLogin: Checking if this is the first login");
+		
+		final SharedPreferences pref = getApplicationContext().getSharedPreferences(PreferenceKeys.FIRST_TIME_LOGIN, 0);
+		boolean isFirstLogin = pref.getBoolean(PreferenceKeys.FIRST_TIME_LOGIN, true);
+		
+		if (isFirstLogin) {
+			Log.d(TAG, "isFirstLogin: Launching the alert dialog");
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+			AlertDialog.Builder alert = new AlertDialog.Builder(this);
+			alert.setMessage(R.string.first_time_vendor_message);
+			alert.setPositiveButton("Okay", new DialogInterface.OnClickListener() {
+				@Override
+				public void onClick(DialogInterface dialog, int i) {
+					Log.d(TAG, "onClick: Closing the dialog");
 
-        return super.onOptionsItemSelected(item);
-    }
+					SharedPreferences.Editor editor = pref.edit();
+					editor.putBoolean(PreferenceKeys.FIRST_TIME_LOGIN, false);
+					editor.commit();
+					dialog.dismiss();
+				}
+			});
+			alert.setIcon(R.drawable.zapmeal);
+			alert.setTitle(" ");
+			AlertDialog alertDialog = alert.create();
+			alert.show();
+
+		}
+
+		
+	}
 }
