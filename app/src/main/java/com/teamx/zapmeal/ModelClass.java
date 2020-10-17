@@ -6,7 +6,7 @@ public class ModelClass {
     private String price;
     private String rating;
     private String name;
-    private String image;
+    private int image;
     private String quantity;
     private String location;
     private String restaurantLocation;
@@ -86,11 +86,14 @@ public class ModelClass {
 
     private Boolean favourite;
 
-    public ModelClass(String price, String rating, String name, String image) {
+    public ModelClass(String price, String rating, String name, int image) {
         this.price = price;
         this.rating = rating;
         this.name = name;
         this.image = image;
+    }
+
+    public ModelClass() {
     }
 
     public String getPrice() {
@@ -105,11 +108,11 @@ public class ModelClass {
         return name;
     }
 
-    public String getImage() {
+    public int getImage() {
         return image;
     }
 
-    public ModelClass(String image) {
+    public ModelClass(int image) {
         this.image = image;
     }
 
@@ -121,11 +124,11 @@ public class ModelClass {
         this.name = name;
     }
 
-    public void setImage(String image) {
+    public void setImage(int image) {
         this.image = image;
     }
 
-    public ModelClass(String price, String name, String image) {
+    public ModelClass(int image, String name, String price) {
         this.price = price;
         this.name = name;
         this.image = image;

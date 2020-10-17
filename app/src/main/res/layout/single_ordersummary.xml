@@ -5,6 +5,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical"
+    app:cardBackgroundColor="@color/cardbackground"
     app:cardCornerRadius="4dp"
     app:cardElevation="4dp"
     app:cardUseCompatPadding="true"
@@ -31,6 +32,7 @@
             android:layout_marginTop="8dp"
             android:text="TextView"
             android:textAlignment="center"
+            android:textColor="@color/textColor"
             app:layout_constraintEnd_toEndOf="@+id/imageView6"
             app:layout_constraintStart_toStartOf="@+id/imageView6"
             app:layout_constraintTop_toBottomOf="@+id/imageView6" />
@@ -42,6 +44,7 @@
             android:layout_marginTop="5dp"
             android:text="TextView"
             android:textAlignment="center"
+            android:textColor="@color/textColor"
             app:layout_constraintStart_toStartOf="@+id/imageView6"
             app:layout_constraintTop_toBottomOf="@+id/tvfname" />
 
@@ -51,6 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:text="TextView"
+            android:textColor="@color/textColor"
             app:layout_constraintEnd_toEndOf="@+id/imageView6"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/tvfprice"

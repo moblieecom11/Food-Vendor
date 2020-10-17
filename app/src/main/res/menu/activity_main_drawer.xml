@@ -8,18 +8,19 @@
         <item
             android:id="@+id/nav_menu"
             android:icon="@drawable/ic_menu"
-            android:title="@string/menu_menu" />
+            android:title="@string/menu_menu"
+            />
         <item
             android:id="@+id/nav_person"
             android:icon="@drawable/ic_person"
             android:title="@string/menu_profile" />
         <item
-            android:id="@+id/nav_cart"
-            android:icon="@drawable/ic_cart"
-            android:title="@string/menu_cart" />
-        <item
             android:id="@+id/nav_orderSummary"
             android:icon="@drawable/ic_order_summary"
             android:title="@string/menu_orderSummary" />
+        <item
+            android:id="@+id/nav_vendor"
+            android:icon="@drawable/ic_baseline_deck_24"
+            android:title="@string/vendor" />
     </group>
 </menu>

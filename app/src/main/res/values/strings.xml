@@ -18,9 +18,9 @@
     <string name="welcome_back">Welcome Back!</string>
     <string name="sign_in">Sign Out</string>
     <string name="access_all_features_and_trending_sales_with_one_tap">Access All Features And Trending Sales With One Tap !</string>
-    <string name="sign_up_as">Sign Up As</string>
+    <string name="sign_up_as">Continue As</string>
     <string name="customer">Customer</string>
-    <string name="continue_as_guest"><![CDATA[Continue As Guest >>>]]></string>
+    <string name="continue_as_guest">Guest</string>
     <string name="vendor">Vendor</string>
 
     <!-- Facebook id and custom url scheme (app id prefixed by 'fb').-->
@@ -55,5 +55,12 @@
     <string name="favourites">Favourites</string>
     <string name="orderApproved">Order Approved</string>
     <string name="orderNotApproved">Order Not Approved</string>
+    <string name="order_now">Order Now!</string>
+    <string name="full_name">Full Name</string>
+    <string name="home_address">Home Address</string>
+    <string name="city">City</string>
+    <string name="state">State</string>
+    <string name="done">Submit</string>
+    <string name="please_enter_your_details">Please Enter Your Details</string>
 
 </resources>

@@ -7,6 +7,8 @@ import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -37,15 +39,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         // Checking for first time launch - before calling setContentView()
         prefManager = new PrefrenceManager(this);
         if (!prefManager.isFirstTimeLaunch()) {
             launchHomeScreen();
             finish();
         }
-
-
         // Making notification bar transparent
         if (Build.VERSION.SDK_INT >= 21) {
             getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
@@ -55,17 +54,13 @@ public class MainActivity extends AppCompatActivity {
         dotsLayout = (LinearLayout) findViewById(R.id.layoutDots);
         btnSkip = (Button) findViewById(R.id.btn_skip);
         btnNext = (Button) findViewById(R.id.btn_next);
-
         // layouts of all welcome sliders
-        // add few more layouts if you want
         layouts = new int[]{
                 R.layout.fragment_first,
                 R.layout.fragment_second
                 };
-
         // adding bottom dots
         addBottomDots(0);
-
         // making notification bar transparent
         changeStatusBarColor();
 
@@ -97,6 +92,17 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+  /*  @Override
+    protected void onStart() {
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        prefManager = new PrefrenceManager(this);
+        if (user != null){
+            launchHomeScreen();
+        }
+        super.onStart();
+    }
+*/
     private void addBottomDots(int currentPage) {
         dots = new TextView[layouts.length];
 
@@ -126,8 +132,17 @@ public class MainActivity extends AppCompatActivity {
         finish();
     }
    private void launchHomeScreen() {
-     //  prefManager.setFirstTimeLaunch(false);
-       if (prefManager.getUserChoice() == "vendor"){
+       prefManager.setFirstTimeLaunch(false);
+       FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+       if (user != null){
+           startActivity(new Intent(MainActivity.this, RegisteredUser.class));
+           finish();
+       }
+       else{
+           startActivity(new Intent(MainActivity.this, Welcome.class));
+           finish();
+       }
+    /*   if (prefManager.getUserChoice() == "vendor"){
            Toast.makeText(this, "Vendor Activity!", Toast.LENGTH_LONG).show();
        }
        else if (prefManager.getUserChoice() == "registered_user"){
@@ -136,8 +151,7 @@ public class MainActivity extends AppCompatActivity {
        }
        //else {
        //    Toast.makeText(this, "No User!", Toast.LENGTH_LONG).show();
-      // }
-
+      // }*/
    }
 
     ViewPager.OnPageChangeListener viewPagerPageChangeListener = new ViewPager.OnPageChangeListener() {

@@ -3,6 +3,7 @@
     package="com.teamx.zapmeal">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 
     <application
         android:allowBackup="true"
@@ -11,15 +12,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ViewDetails"></activity>
+        <activity android:name=".Cart"></activity>
+        <activity android:name=".UserDetails" />
+        <activity android:name=".ViewDetails" />
         <activity android:name=".Rate" />
         <activity
             android:name=".RegisteredUser"
-            android:label="@string/title_activity_registered_user"
-            android:theme="@style/AppTheme.NoActionBar">
-
+            android:configChanges="uiMode"
+            android:label="@string/title_activity_registered_user">
         </activity>
-        <activity android:name=".Welcome"></activity>
+        <activity android:name=".Welcome"/>
         <activity
             android:name=".Login"
             android:theme="@style/AppTheme.NoActionBar" />

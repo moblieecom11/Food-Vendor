@@ -18,7 +18,7 @@ public class Rate extends AppCompatActivity {
         setContentView(R.layout.activity_rate);
 
         // initiate rating bar and a button
-        final RatingBar simpleRatingBar = (RatingBar) findViewById(R.id.ratingbar);
+        final RatingBar simpleRatingBar = (RatingBar) findViewById(R.id.ratingBar);
         Button submitButton = (Button) findViewById(R.id.btnrate);
         final EditText reviews = (EditText) findViewById(R.id.editTextTextMultiLine);
         // perform click event on button

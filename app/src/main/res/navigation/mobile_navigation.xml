@@ -18,10 +18,10 @@
         tools:layout="@layout/fragment_menu" />
 
     <fragment
-        android:id="@+id/nav_cart"
-        android:name="com.teamx.zapmeal.ui.cart.CartFragment"
-        android:label="@string/menu_cart"
-        tools:layout="@layout/fragment_cart" />
+        android:id="@+id/nav_vendor"
+        android:name="com.teamx.zapmeal.ui.vendor.VendorFragment"
+        android:label="@string/vendor"
+        tools:layout="@layout/fragment_vendor" />
     <fragment
         android:id="@+id/nav_orderSummary"
         android:name="com.teamx.zapmeal.ui.orderSummary.orderSummary"

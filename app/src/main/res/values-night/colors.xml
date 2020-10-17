@@ -1,24 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
-    <color name="button_color">#3399ff</color>
-    <color name="text_color">#0066cc</color>
-    <color name="dark_text_color">#191966</color>
+    <color name="colorPrimary">#424242</color>
+    <color name="colorPrimaryDark">#262626</color>
+    <color name="colorAccent">#B18F6A</color>
+    <color name="button_color">#8f3f2a</color>
     <!-- colors for background screen -->
-    <color name="bg_screen1">#ff0000</color>
-    <color name="bg_screen2">#ff0066</color>
-    <color name="bg_screen3">#0000ff</color>
-    <color name="bg_screen4">#ff3300</color>
+    <color name="bg_screen1">#a15226</color>
+    <color name="bg_screen2">#954e2c</color>
+    <color name="bg_screen3">#ad522e</color>
+    <color name="bg_screen4">#BD8260</color>
     <!-- colors for active screens -->
-    <color name="active_screen1">#ff9999</color>
-    <color name="active_screen2">#ff99cc</color>
-    <color name="active_screen3">#9999ff</color>
+    <color name="active_screen1">#BD8260</color>
+    <color name="active_screen2">#BD8260</color>
+    <color name="active_screen3">#B18F6A</color>
     <!-- colors for in active screens -->
-    <color name="nactive1">#990000</color>
-    <color name="nactive2">#800040</color>
-    <color name="nactive3">#000080</color>
+    <color name="nactive1">#8f3f2a</color>
+    <color name="nactive2">#8f3f2a</color>
+    <color name="nactive3">#8f3f2a</color>
 
     <color name="slide_text_color">#fff</color>
 
@@ -28,8 +26,10 @@
         <item>@color/active_screen3</item>
     </array>
     <!-- for night mode-->
-    <color name="backgroundColor">#000</color>
+    <color name="backgroundColor">#262626</color>
     <color name="textColor">#fff</color>
+    <color name="cardbackground">#424242</color>
+    <color name="imgColor">#fff</color>
 
     <array name="array_dot_inactive">
         <item>@color/nactive1</item>

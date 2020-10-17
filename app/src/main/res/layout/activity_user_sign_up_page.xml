@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -15,17 +15,18 @@
         android:layout_width="@dimen/img_width_height"
         android:layout_height="@dimen/img_width_height"
         android:layout_gravity="center"
-        android:layout_marginTop="@dimen/dist_margin"
-        app:srcCompat="@drawable/ic_baseline_fastfood_24"
-        tools:layout_editor_absoluteX="64dp"
-        tools:layout_editor_absoluteY="84dp" />
+        android:layout_marginTop="42dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_fastfood_24" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="@dimen/dist_margin"
+        android:layout_marginTop="86dp"
         android:fontFamily="sans-serif-black"
         android:text="@string/sign_up_as"
         android:textAlignment="center"
@@ -34,53 +35,51 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="443dp" />
-
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="40dp">
-
-        <Button
-            android:id="@+id/button4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="50dp"
-            android:background="@drawable/button_background"
-            android:padding="10dp"
-            android:text="@string/customer"
-            android:textAllCaps="false"
-            android:textColor="@color/text_color"
-            android:textSize="@dimen/slide_desc" />
-
-        <Button
-            android:id="@+id/button5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
-            android:layout_toEndOf="@id/button4"
-            android:background="@drawable/button_background"
-            android:padding="10dp"
-            android:text="@string/vendor"
-            android:textAllCaps="false"
-            android:textColor="@color/text_color"
-            android:textSize="@dimen/slide_desc" />
-    </RelativeLayout>
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="16dp"
         android:text="@string/continue_as_guest"
         android:textAlignment="center"
         android:textColor="@color/slide_text_color"
         android:textSize="@dimen/slide_desc"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/textView40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="64dp"
+        android:text="@string/customer"
+        android:textAlignment="center"
+        android:textColor="@color/slide_text_color"
+        android:textSize="@dimen/slide_desc"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/textView41"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView41"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="76dp"
+        android:text="@string/vendor"
+        android:textAlignment="center"
+        android:textColor="@color/slide_text_color"
+        android:textSize="@dimen/slide_desc"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
