@@ -28,18 +28,7 @@ public class Cart extends AppCompatActivity {
         setContentView(R.layout.activity_cart);
         recyclerView = findViewById(R.id.rvcart);
         order = findViewById(R.id.btnOrder);
-        try{
-            modelClass = new ModelClass(getIntent().getIntExtra("food_pic", R.drawable.amalaandewedu),
-                    getIntent().getStringExtra("food_name"),
-                    getIntent().getStringExtra("food_price"));
-            arrayList.add(modelClass);
-            adapter = new RVCartAdapter(arrayList);
-            recyclerView.setHasFixedSize(true);
-            recyclerView.setLayoutManager(new LinearLayoutManager(this));
-            recyclerView.setAdapter(adapter);
-        } catch (Exception e) {
-            Toast.makeText(Cart.this, "No data", Toast.LENGTH_LONG).show();
-        }
+
         order.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

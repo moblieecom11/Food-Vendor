@@ -24,21 +24,13 @@ public class ViewDetails extends AppCompatActivity {
         tv1 = findViewById(R.id.textView22);
         addcart = findViewById(R.id.button7);
         viewLocation = findViewById(R.id.button6);
-        final int pic = getIntent().getIntExtra("food_pic", R.drawable.amalaandewedu);
-        final String name = getIntent().getStringExtra("food_name");
-        final String price = getIntent().getStringExtra("food_price");
 
-        imageView.setImageResource(pic);
-        tv.setText(name);
-        tv1.setText(price);
 
         addcart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent viewIntem = new Intent(v.getContext(), Cart.class);
-                viewIntem.putExtra("food_pic", pic);
-                viewIntem.putExtra("food_name", name);
-                viewIntem.putExtra("food_price", price);
+
                getApplicationContext().startActivity(viewIntem);
             }
         });

@@ -44,16 +44,5 @@ public class Welcome extends AppCompatActivity {
         setContentView(R.layout.activity_welcome);
         recyclerView = findViewById(R.id.rv_welcome);
 
-        String[] prices = {"800", "1200", "800", "1200", "1250", "500", "1200", "1000", "600", "800", "1000", "500", "800", "1000"};
-        String[] names = {"Amala and Ewedu", "Fried Rice and Grilled Fish", "Fufu and Vegetables", "Jollof Rice and Beef",
-                "Jollof Rice and Chicken", "Moimoi", "Noodels and Plantain", "Pounded Yam and Vegetables",
-                "Plantain and Eggs", "Rice and Grilled Fish", "Suya", "Yam Porridge", "Rice and Stew", "Fried Rice"};
-        int[] flags = {R.drawable.amalaandewedu, R.drawable.friceandfish, R.drawable.fufuandveg, R.drawable.jollofrice, R.drawable.jf,
-                R.drawable.moimoi, R.drawable.noodelsandplantain, R.drawable.p_yamandveg, R.drawable.plantainandegg, R.drawable.riceandfish,
-                R.drawable.suya, R.drawable.yamporridge, R.drawable.riceandstew, R.drawable.download};
-        adapter = new GuestAdapter(getApplicationContext(), flags, names, prices);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
-        recyclerView.setAdapter(adapter);
     }
 }

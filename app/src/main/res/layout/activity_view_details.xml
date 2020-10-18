@@ -6,9 +6,8 @@
     android:layout_height="match_parent"
     android:background="@color/backgroundColor"
     app:cardBackgroundColor="@color/cardbackground"
-    app:cardElevation="10dp"
+    app:cardElevation="6dp"
     app:cardUseCompatPadding="true"
-    app:contentPadding="@dimen/fab_margin"
     tools:context=".ViewDetails">
 
     <ScrollView
@@ -31,7 +30,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:srcCompat="@drawable/jf" />
+                tools:srcCompat="@drawable/ic_cart" />
 
             <LinearLayout
                 android:id="@+id/linearLayout"
