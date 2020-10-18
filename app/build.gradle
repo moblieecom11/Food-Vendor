@@ -28,7 +28,7 @@ dependencies {
     implementation 'com.google.android.material:material:1.2.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
     implementation 'androidx.navigation:navigation-fragment:2.3.0'
-    implementation 'androidx.navigation:navigation-ui:2.3.0'
+    implementation 'androidx.navigation:navigation-ui:2.3.1'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
@@ -37,4 +37,23 @@ dependencies {
     //circle images
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 
+    // Firebase
+    implementation platform('com.google.firebase:firebase-bom:25.12.0')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.firebaseui:firebase-ui-auth:6.2.0'
+
+    // Import the Firebase BoM
+    implementation platform('com.google.firebase:firebase-bom:25.12.0')
+
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+
+    // Declare the dependency for the Firebase SDK for Google Analytics
+    implementation 'com.google.firebase:firebase-analytics'
+
+    // Declare the dependencies for any other desired Firebase products
+    // For example, declare the dependencies for Firebase Authentication and Cloud Firestore
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.firebase:firebase-firestore'
 }
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'

@@ -50,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
 			alert.setTitle(" ");
 			AlertDialog alertDialog = alert.create();
 			alert.show();
-
 		}
 
 		
