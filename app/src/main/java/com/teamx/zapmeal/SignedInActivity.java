@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -13,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class SignedInActivity extends AppCompatActivity {
+public class SignedInActivity extends AppCompatActivity implements View.OnClickListener {
 
     private static final String TAG = "SignedInActivity";
 
@@ -126,6 +127,11 @@ public class SignedInActivity extends AppCompatActivity {
         }
     }
 
-
-
+    @Override
+    public void onClick(View v) {
+        if (v.getId() == R.id.btn_profile) {
+            Intent intent = new Intent(SignedInActivity.this, HomeFragment.class);
+            startActivity(intent);
+        }
+    }
 }

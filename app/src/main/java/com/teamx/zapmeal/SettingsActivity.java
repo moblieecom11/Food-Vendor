@@ -207,7 +207,7 @@ public class SettingsActivity extends AppCompatActivity {
                                                 Toast.makeText(SettingsActivity.this, "unable to update email", Toast.LENGTH_SHORT).show();
                                             }
                                         });
-                            } else {
+                            }else{
                                 Toast.makeText(SettingsActivity.this, "you must use a company email", Toast.LENGTH_SHORT).show();
                             }
 

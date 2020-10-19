@@ -71,7 +71,7 @@ public class VendorLoginActivity extends AppCompatActivity implements View.OnCli
 				signOut();
 				return true;
 			case R.id.optionAccountSettings:
-				Intent intent = new Intent(VendorLoginActivity.this, SettingsActivity.class);
+				Intent intent = new Intent(VendorLoginActivity.this, VendorSettingsActivity.class);
 				startActivity(intent);
 				return true;
 			default:
@@ -126,7 +126,7 @@ public class VendorLoginActivity extends AppCompatActivity implements View.OnCli
 	@Override
 	public void onClick(View v) {
 		if (v.getId() == R.id.btn_profile) {
-			Intent intent = new Intent(VendorLoginActivity.this, MainActivity.class);
+			Intent intent = new Intent(VendorLoginActivity.this, HomeFragment.class);
 			startActivity(intent);
 		}
 	}

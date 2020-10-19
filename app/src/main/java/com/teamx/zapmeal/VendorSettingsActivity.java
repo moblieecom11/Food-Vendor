@@ -11,16 +11,16 @@ import android.util.Log;
 
 import com.teamx.zapmeal.util.PreferenceKeys;
 
-public class MainActivity extends AppCompatActivity {
+public class VendorSettingsActivity extends AppCompatActivity {
 
 	private static final String TAG = "MainActivity";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.vendor_profile);
+		setContentView(R.layout.fragment_home);
 
-//		isFirstLogin();
+		isFirstLogin();
 //		init();
 	}
 
@@ -35,10 +35,10 @@ public class MainActivity extends AppCompatActivity {
 
 	private void isFirstLogin() {
 		Log.d(TAG, "isFirstLogin: Checking if this is the first login");
-		
+
 		final SharedPreferences pref = getApplicationContext().getSharedPreferences(PreferenceKeys.FIRST_TIME_LOGIN, 0);
 		boolean isFirstLogin = pref.getBoolean(PreferenceKeys.FIRST_TIME_LOGIN, true);
-		
+
 		if (isFirstLogin) {
 			Log.d(TAG, "isFirstLogin: Launching the alert dialog");
 
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
 					SharedPreferences.Editor editor = pref.edit();
 					editor.putBoolean(PreferenceKeys.FIRST_TIME_LOGIN, false);
-					editor.commit();
+					editor.apply();
 					dialog.dismiss();
 				}
 			});
@@ -61,6 +61,6 @@ public class MainActivity extends AppCompatActivity {
 			alert.show();
 		}
 
-		
+
 	}
 }

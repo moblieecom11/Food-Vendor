@@ -71,5 +71,6 @@
     <string name="company_culture">Company culture</string>
     <string name="food_description">Food item</string>
     <string name="action_sign_out">Sign out</string>
+    <string name="action_home">Home</string>
 
 </resources>
