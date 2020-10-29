@@ -20,23 +20,33 @@
     <string name="gender_none">Do Not Identify</string>
     <string name="gender_prompt">Choose your gender</string>
 
+    <!-- Fragments-->
+    <string name="tag_home">Home</string>
+
     <!-- Dialog Messages -->
     <string name="first_time_vendor_message">
-        We noticed this is your first login. Make sure to input your food preferences in the Settings screen so we can find potential matches!
+        Hi there! We noticed this is your first login. Please set up your Vendor Account so that we can find potential matches!
     </string>
 
+    <!--    Registration-->
+    <string name="action_sign">Sign in</string>
+    <string name="email_registration">Email</string>
+    <string name="prompt_email">Enter your email</string>
+    <string name="login_description">Please fill this form</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="register">Register</string>
+    <string name="forgot_password">Forgot password</string>
+    <string name="resend_verification_email">Resend verification email</string>
 
     <string-array name="food_category">
         <item>Fries</item>
         <item>Local Dishes</item>
-        <item>Local Dishes</item>
         <item>Continental Dishes</item>
         <item>Drinks</item>
-        <item></item>
+        <item>Other</item>
     </string-array>
-    <string name="status_looking">Looking</string>
-    <string name="status_not_looking">Not Looking</string>
-    <string name="relationship_prompt">You you looking?</string>
+    <string name="food_category_prompt">You you looking?</string>
 
 
     <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -46,5 +56,21 @@
         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
         anim id est laborum.
 </string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="action_password">Password</string>
+    <string name="email">Email</string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="sign_out">Sign out</string>
+    <string name="account_settings">Account Settings</string>
+    <string name="current_password">Current Password</string>
+    <string name="vendor_dashboar">Vendor Dashboard</string>
+    <string name="this_week_s_initiatives">This week\'s initiative</string>
+    <string name="employee_schedule">Schedule</string>
+    <string name="company_culture">Company culture</string>
+    <string name="food_description">Food item</string>
+    <string name="action_sign_out">Sign out</string>
+    <string name="action_home">Home</string>
 
 </resources>

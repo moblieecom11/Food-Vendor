@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "632017649238",
+    "firebase_url": "https://zapmalldev.firebaseio.com",
+    "project_id": "zapmalldev",
+    "storage_bucket": "zapmalldev.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:632017649238:android:ef3d815b248b79f88545f7",
+        "android_client_info": {
+          "package_name": "com.teamx.zapmeal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "632017649238-1vt1ifb1u2f194msg2q8v84g3u3q0q51.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAATI8z3_FKsB9UEgwMEPjUBuW07_YQ0jQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "632017649238-1vt1ifb1u2f194msg2q8v84g3u3q0q51.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

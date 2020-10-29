@@ -40,12 +40,12 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/toolbar">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="matrix"
-            android:alpha=".1"
-            android:id="@+id/background"/>
+<!--        <ImageView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:scaleType="matrix"-->
+<!--            android:alpha=".1"-->
+<!--            android:id="@+id/background"/>-->
 
     </RelativeLayout>
 
@@ -237,7 +237,7 @@
                         android:textSize="20sp"
                         android:id="@+id/food_category"
                         android:entries="@array/food_category"
-                        android:prompt="@string/relationship_prompt"/>
+                        android:prompt="@string/food_category_prompt"/>
 
                 </LinearLayout>
 
